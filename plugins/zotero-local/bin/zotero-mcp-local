@@ -1,0 +1,5 @@
+#!/bin/bash
+# Launcher for modified Zotero MCP server
+DIR="$(cd "$(dirname "$0")/.." && pwd)"
+export PYTHONPATH="$DIR/src:$PYTHONPATH"
+exec python3 -m zotero_mcp "$@"
