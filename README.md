@@ -5,14 +5,14 @@ Personal marketplace for Claude Code: arXiv paper translator + modified Zotero M
 ## Quick Install
 
 ```bash
-git clone <this-repo> ~/dev/claude-config
-cd ~/dev/claude-config && bash install.sh
+git clone <this-repo> ~/dev/claude-research-kit
+cd ~/dev/claude-research-kit && bash install.sh
 ```
 
 Then in Claude Code:
 
 ```
-/plugin marketplace add github.com/liusihan/claude-config
+/plugin marketplace add github.com/liusihan/claude-research-kit
 /plugin install arxiv-translate
 /plugin install zotero-local
 ```
