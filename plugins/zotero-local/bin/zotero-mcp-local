@@ -1,5 +1,12 @@
 #!/bin/bash
 # Launcher for modified Zotero MCP server
-DIR="$(cd "$(dirname "$0")/.." && pwd)"
-export PYTHONPATH="$DIR/src:$PYTHONPATH"
-exec python3 -m zotero_mcp "$@"
+# Works both from repo layout and from installed ~/.local/bin/
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+# Try repo layout first (plugins/zotero-local/bin/../src)
+if [ -d "$SCRIPT_DIR/../src/zotero_mcp" ]; then
+    export PYTHONPATH="$SCRIPT_DIR/../src:$PYTHONPATH"
+# Try installed layout (~/.local/share/zotero-local/src)
+elif [ -d "$HOME/.local/share/zotero-local/src/zotero_mcp" ]; then
+    export PYTHONPATH="$HOME/.local/share/zotero-local/src:$PYTHONPATH"
+fi
+exec python3 -c "from zotero_mcp.cli import main; main()" "$@"

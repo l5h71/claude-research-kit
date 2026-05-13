@@ -16,12 +16,14 @@ for skill_dir in "$SRC"/plugins/*/skills/*/; do
     echo "  $name → $CLAUDE_SKILLS/$name"
 done
 
-# 2. Install Zotero MCP launcher
+# 2. Install Zotero MCP launcher + source
 echo "[2/3] Installing Zotero MCP launcher..."
-mkdir -p "$HOME/.local/bin"
+mkdir -p "$HOME/.local/bin" "$HOME/.local/share/zotero-local"
 cp "$SRC/plugins/zotero-local/bin/zotero-mcp-local" "$HOME/.local/bin/"
 chmod +x "$HOME/.local/bin/zotero-mcp-local"
+cp -r "$SRC/plugins/zotero-local/src" "$HOME/.local/share/zotero-local/"
 echo "  zotero-mcp-local → $HOME/.local/bin/"
+echo "  src/ → $HOME/.local/share/zotero-local/src/"
 
 # 3. Install Python deps
 echo "[3/3] Installing Python dependencies..."
