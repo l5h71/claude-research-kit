@@ -1,18 +1,21 @@
 {
-  "name": "Sihan's Claude Code Plugins",
-  "description": "Personal marketplace: arXiv paper translator + Zotero MCP with local PDF storage",
-  "version": "1.0.0",
-  "author": "Sihan Liu",
+  "name": "claude-research-kit",
+  "owner": {
+    "name": "Sihan Liu"
+  },
+  "description": "科研工具集：arXiv 论文翻译 + 修改版 Zotero MCP（本地 PDF 存储）",
   "plugins": [
     {
       "name": "arxiv-translate",
-      "description": "Translate arXiv papers to bilingual Chinese-English PDF, attach to Zotero",
-      "path": "plugins/arxiv-translate"
+      "description": "翻译 arXiv 论文为中英双语 PDF，支持图表提取，自动挂载到 Zotero",
+      "source": "./plugins/arxiv-translate",
+      "tags": ["arxiv", "translation", "zotero", "research", "chinese"]
     },
     {
       "name": "zotero-local",
-      "description": "Modified Zotero MCP server with local PDF storage and arXiv link support",
-      "path": "plugins/zotero-local"
+      "description": "修改版 Zotero MCP：本地 PDF 存储 + WebDAV 同步 + arXiv linked_url 支持",
+      "source": "./plugins/zotero-local",
+      "tags": ["zotero", "pdf", "webdav", "reference-manager"]
     }
   ]
 }

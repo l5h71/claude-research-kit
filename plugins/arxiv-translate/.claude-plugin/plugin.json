@@ -1,0 +1,7 @@
+{
+  "name": "arxiv-translate",
+  "version": "1.0.0",
+  "description": "Translate arXiv papers to bilingual Chinese-English PDF with figures, attach to Zotero",
+  "author": { "name": "Sihan Liu" },
+  "skills": ["skills/arxiv-translate"]
+}
