@@ -3,5 +3,18 @@
   "description": "Modified Zotero MCP: local PDF storage + WebDAV sync + arXiv linked_url support",
   "author": {
     "name": "Sihan Liu"
+  },
+  "bin": "./bin",
+  "mcpServers": {
+    "zotero": {
+      "command": "${CLAUDE_PLUGIN_ROOT}/bin/zotero-mcp-local",
+      "env": {
+        "ZOTERO_LOCAL": "true",
+        "ZOTERO_API_KEY": "${ZOTERO_API_KEY}",
+        "ZOTERO_LIBRARY_ID": "${ZOTERO_LIBRARY_ID}",
+        "http_proxy": "${HTTP_PROXY_CC:-http://127.0.0.1:7890}",
+        "https_proxy": "${HTTP_PROXY_CC:-http://127.0.0.1:7890}"
+      }
+    }
   }
 }

@@ -3,5 +3,6 @@
   "description": "Translate arXiv papers to bilingual Chinese-English PDF with figures, attach to Zotero",
   "author": {
     "name": "Sihan Liu"
-  }
+  },
+  "skills": "./skills"
 }
